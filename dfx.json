@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "cbank_backend": {
+      "main": "src/cbank_backend/main.mo",
+      "type": "motoko"
+    },
+    "cbank_frontend": {
+      "dependencies": [
+        "cbank_backend"
+      ],
+      "source": [
+        "src/cbank_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "cbank_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
